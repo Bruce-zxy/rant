@@ -83,8 +83,8 @@ export default Form.create()(withRouter((props) => {
     const { getFieldDecorator, getFieldsError, validateFields } = form;
     
     useEffect(() => {
-        if (document) document.title = '2019江西省第三届文化旅游投资发展促进会开始报名了';
-        toSetWeChatShareConfig('2019江西省第三届文化旅游投资发展促进会开始报名了', '【报名啦】2019江西省第三届文化旅游投资发展促进会火热报名中，欢迎各大优秀旅游企业共襄盛会！', window.location.origin + config.staticImgUrl + `topic/topic@small.jpg`);
+        if (document) document.title = '2019江西省第三届文化和旅游投资发展促进会开始报名了';
+        toSetWeChatShareConfig('2019江西省第三届文化和旅游投资发展促进会开始报名了', '【报名啦】2019江西省第三届文化和旅游投资发展促进会火热报名中，欢迎各大优秀旅游企业共襄盛会！', window.location.origin + config.staticImgUrl + `topic/topic@small.jpg`);
         if (!sessionStorage.getItem('area')) {
             fetch('/api/metadata/tree/descendantsTree/%E5%9C%B0%E5%8C%BA').then(res => res.json()).then((res) => {
                 if (res && res.length > 0) {
@@ -225,7 +225,7 @@ export default Form.create()(withRouter((props) => {
                 <div className="line-divider"></div>
                 <p className="line-2">指导单位：江西省文化和旅游厅</p>
                 <p className="line-3">主办单位：江西省旅游集团</p>
-                <p className="line-4">2019.11.6 | 江西·南昌</p>
+                <p className="line-4">2019.11.8 | 江西·南昌</p>
                 <p className="line-5">
                     <a className="to-register" href="#registration">立即报名</a>
                 </p>
@@ -281,13 +281,13 @@ export default Form.create()(withRouter((props) => {
                             width="100%"
                             height="100%"
                             effect="blur"
-                            placeholderSrc={config.staticImgUrl + `topic/guest-2@small.jpg`}
-                            src={config.staticImgUrl + `topic/guest-2@large.jpg`} // use normal <img> attributes as props
+                            placeholderSrc={config.staticImgUrl + `topic/xh-80.png`}
+                            src={config.staticImgUrl + `topic/xh-533.png`} // use normal <img> attributes as props
                             alt="banner"
                         />
-                        <p>戴斌</p>
-                        <p>中国旅游研究院</p>
-                        <p>院长</p>
+                        <p>夏晗</p>
+                        <p>景域驴妈妈集团</p>
+                        <p>副总裁</p>
                     </div>
                     <div>
                         <LazyLoadImage
@@ -307,26 +307,26 @@ export default Form.create()(withRouter((props) => {
                             width="100%"
                             height="100%"
                             effect="blur"
-                            placeholderSrc={config.staticImgUrl + `topic/guest-4@small.jpg`}
-                            src={config.staticImgUrl + `topic/guest-4@large.jpg`} // use normal <img> attributes as props
+                            placeholderSrc={config.staticImgUrl + `topic/wrs-80.png`}
+                            src={config.staticImgUrl + `topic/wrs-533.png`} // use normal <img> attributes as props
                             alt="banner"
                         />
-                        <p>夏晗</p>
-                        <p>上海景域旅游发展有限公司</p>
-                        <p>副总裁</p>
+                        <p>吴若山</p>
+                        <p>人民日报社人民文旅智库</p>
+                        <p>理事长兼首席研究员</p>
                     </div>
                     <div>
                         <LazyLoadImage
                             width="100%"
                             height="100%"
                             effect="blur"
-                            placeholderSrc={config.staticImgUrl + `topic/bjj-80.png`}
-                            src={config.staticImgUrl + `topic/bjj-533.png`} // use normal <img> attributes as props
+                            placeholderSrc={config.staticImgUrl + `topic/ljw-80.png`}
+                            src={config.staticImgUrl + `topic/ljw-533.png`} // use normal <img> attributes as props
                             alt="banner"
                         />
-                        <p>鲍将军</p>
-                        <p>杭州金马克文化旅游发展有限公司</p>
-                        <p>执行董事兼总经理</p>
+                        <p>刘杰武</p>
+                        <p>深圳大学文化与旅游新业态发展研究中心</p>
+                        <p>副研究员</p>
                     </div>
                 </div>
                 <div id="agenda" className="intro-meeting">
@@ -468,10 +468,10 @@ export default Form.create()(withRouter((props) => {
                     <i></i>
                 </p>
                 <div className="intro-content sponsor-list">
-                    <img src={config.staticImgUrl + `topic/sponsor_1.jpg`} alt='江西银行' />
                     <img src={config.staticImgUrl + `topic/bjyh.jpg`} alt='北京银行' />
+                    <img src={config.staticImgUrl + `topic/sponsor_1.jpg`} alt='江西银行' />
                     <img src={config.staticImgUrl + `topic/msyh.jpg`} alt='民生银行' />
-                    <img src={config.staticImgUrl + `topic/sponsor_4.jpg`} alt='赞助单位' />
+                    <img src={config.staticImgUrl + `topic/gdyh.jpg`} alt='广大银行' />
                 </div>
                 <div className="empty-divider"></div>
                 <div className="empty-divider"></div>

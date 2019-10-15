@@ -44,7 +44,6 @@ export default withContext((Form.create()(props => {
 		(async () => {
 			const list = await getAreaList(client);
 			setAreaList(list);
-
 			if (!!id) {
 				const { data: { project } } = await client.query({
 					query: Q_GET_PROJECT,

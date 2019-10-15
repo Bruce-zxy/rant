@@ -7,8 +7,11 @@ import React, { useContext, useEffect, useState } from 'react';
 import UserLayout from '../../../components/Layout/UserLayout';
 import withContext, { GlobalContext } from '../../../components/Layout/withContext';
 import StandardTable from '../../../components/StandardTable';
-import { Q_GET_APPLY_CAPITALS } from '../../../gql';
-import { buildingQuery, jump, toFetchCurrentUser } from '../../../lib/global';
+import StandardConfirm from '../../../components/StandardConfirm';
+import LogReader from '../../../components/LogReader';
+import { Q_GET_CAPITALS } from '../../../gql';
+import { LogTypeEnum, ProjectStatusEnum } from '../../../lib/enum';
+import { buildingQuery, jump, ProjectStatusMaps, toFetchCurrentUser } from '../../../lib/global';
 import './fund_manage.scss';
 
 export const M_APPROVAL_CAPITAL = gql`
@@ -43,7 +46,7 @@ export default withContext(props => {
 
 	const [variables, setVariables] = useState(defaultVariables);
 
-	const { loading, data: { queryApplyCapital: res }, refetch } = useQuery(Q_GET_APPLY_CAPITALS, {
+	const { loading, data: { queryCapital: res }, refetch } = useQuery(Q_GET_CAPITALS, {
 		notifyOnNetworkStatusChange: true,
 		variables: { queryString: buildingQuery(defaultVariables) },
 	});
@@ -67,17 +70,14 @@ export default withContext(props => {
 
 	const columns = [
 		{
-			title: '名称',
-			dataIndex: 'capital.title',
-			render: (val, row) => <a href={`/user/publish/finance?id=${row.capital.id}`}>{val}</a>
+			title: '标题',
+			dataIndex: 'title',
+			render: (val, row) => <a href={`/user/publish/funding?id=${row.id}`}>{val}</a>
 		},
 		{
-			title: '联系人',
-			dataIndex: 'capital.creator.realname',
-		},
-		{
-			title: '联系电话',
-			dataIndex: 'capital.creator.phone',
+			title: '状态',
+			dataIndex: 'status',
+			render: val => ProjectStatusMaps[val]
 		},
 		{
 			title: '申请时间',
@@ -100,19 +100,9 @@ export default withContext(props => {
 								}}
 							>
 								[完成]
-          					</a>
-							<Divider type="vertical" />
+          		</a>
 						</>
 						: null}
-					<a
-						href="javascript:;"
-						onClick={() => {
-							setCurrent(row);
-							setLogVisible(true);
-						}}
-					>
-						[日志]
-			   		</a>
 				</>
 			)
 		}
@@ -152,7 +142,7 @@ export default withContext(props => {
 					setVisible={setLogVisible}
 				/>
 				<p className="right-title">
-					<Button type="primary" onClick={() => jump('/user/publish/finance')}>
+					<Button type="primary" onClick={() => jump('/user/publish/funding')}>
 						立即发布
  					</Button>
 				</p>

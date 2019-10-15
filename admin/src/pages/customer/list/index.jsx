@@ -162,7 +162,7 @@ export default () => {
       },
     },
     {
-      title: '5日晚餐',
+      title: '7日晚餐',
       dataIndex: 'dinner5',
       render: (_, row) => {
         const info = JSON.parse(row.ex_info);
@@ -172,7 +172,7 @@ export default () => {
       },
     },
     {
-      title: '5日住宿（含早餐）',
+      title: '7日住宿（含早餐）',
       dataIndex: 'stay5',
       render: (_, row) => {
         const info = JSON.parse(row.ex_info);
@@ -182,7 +182,7 @@ export default () => {
       },
     },
     {
-      title: '6日午餐',
+      title: '8日午餐',
       dataIndex: 'lunch6',
       render: (_, row) => {
         const info = JSON.parse(row.ex_info);

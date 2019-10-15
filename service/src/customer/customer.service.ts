@@ -113,15 +113,15 @@ export class CustomerService extends BaseService<Customer> {
 
             const board_and_lodging = [];
 
-            if (item['5日晚餐']) {
+            if (item['7日晚餐']) {
                 board_and_lodging.push('dinner5');
             }
 
-            if (item['5日住宿（含早餐）']) {
+            if (item['7日住宿（含早餐）']) {
                 board_and_lodging.push('stay5');
             }
 
-            if (item['6日午餐']) {
+            if (item['8日午餐']) {
                 board_and_lodging.push('lunch6');
             }
 

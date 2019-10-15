@@ -54,7 +54,9 @@ export class UserController {
     @Get('/publish/funding')
     @Render(`${PAGE_URL}/publish/funding`)
     @ApiOperation({ title: 'user publish funding' })
-    userPublishFunding() { }
+    userPublishFunding(@Query() query) {
+        return { id: query.id };
+     }
 
     @Get('/publish/project')
     @Render(`${PAGE_URL}/publish/project`)
