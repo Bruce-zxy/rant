@@ -354,38 +354,6 @@ export default Form.create()(withRouter((props) => {
                         src={config.staticImgUrl + `topic/part-3@large.jpg`} // use normal <img> attributes as props
                         alt="banner"
                     />
-                    <LazyLoadImage
-                        width="100%"
-                        height="100%"
-                        effect="blur"
-                        placeholderSrc={config.staticImgUrl + `topic/part-4@small.jpg`}
-                        src={config.staticImgUrl + `topic/part-4@large.jpg`} // use normal <img> attributes as props
-                        alt="banner"
-                    />
-                    <LazyLoadImage
-                        width="100%"
-                        height="100%"
-                        effect="blur"
-                        placeholderSrc={config.staticImgUrl + `topic/part-5@small.jpg`}
-                        src={config.staticImgUrl + `topic/part-5@large.jpg`} // use normal <img> attributes as props
-                        alt="banner"
-                    />
-                    <LazyLoadImage
-                        width="100%"
-                        height="100%"
-                        effect="blur"
-                        placeholderSrc={config.staticImgUrl + `topic/part-6@small.jpg`}
-                        src={config.staticImgUrl + `topic/part-6@large.jpg`} // use normal <img> attributes as props
-                        alt="banner"
-                    />
-                    <LazyLoadImage
-                        width="100%"
-                        height="100%"
-                        effect="blur"
-                        placeholderSrc={config.staticImgUrl + `topic/part-7@small.jpg`}
-                        src={config.staticImgUrl + `topic/part-7@large.jpg`} // use normal <img> attributes as props
-                        alt="banner"
-                    />
                 </div>
 
                 <p id="meeting-address" className="intro-title">
