@@ -60,7 +60,10 @@ export class CustomerService extends BaseService<Customer> {
                 await this.verificationService.sendSms(target.phone, SmsTypeEnum.USER, password);
             }
 
+        } else if (ProjectStatusEnum.REJECTED === target.status) {
+            await this.verificationService.sendSms(target.phone, SmsTypeEnum.REJECT, "password");
         }
+
 
         await customerRepo.save(target);
         return true;
