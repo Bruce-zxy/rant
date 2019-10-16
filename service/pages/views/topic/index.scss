@@ -149,6 +149,11 @@ a {
 
         span {
             margin: 0 4px;
+
+            >b {
+                display: flex;
+                font-size: 3.2vw;
+            }
         }
     }
 

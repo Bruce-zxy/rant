@@ -257,7 +257,7 @@ export default Form.create()(withRouter((props) => {
                     <i></i>
                     <i></i>
                     <i></i>
-                    <span>重要嘉宾（排名不分先后）</span>
+                    <span>重要嘉宾<b>（排名不分先后）</b></span>
                     <i></i>
                     <i></i>
                     <i></i>
