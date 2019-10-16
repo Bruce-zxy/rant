@@ -46,12 +46,11 @@ export default withContext((Form.create()(props => {
 					query: Q_GET_CAPITAL,
 					variables: { id }
 				});
-				console.log(capital);
 				setTarget(capital);
 				setCategory(capital.category);
 
 				const areas = capital && capital.area ? (
-					toGetParentArrayByChildNode(list, { id: caiptal.area.id })
+					toGetParentArrayByChildNode(list, { id: capital.area.id })
 				) : null;
 
 				setArea(areas ? areas.map(item => item.id) : null);
