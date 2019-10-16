@@ -217,8 +217,8 @@ export default Form.create()(withRouter((props) => {
                     width="100%"
                     height="100%"
                     effect="blur"
-                    placeholderSrc={config.staticImgUrl + `topic/topic@small.jpg`}
-                    src={config.staticImgUrl + `topic/topic@large.jpg`} // use normal <img> attributes as props
+                    placeholderSrc={config.staticImgUrl + `topic/topic@small.png`}
+                    src={config.staticImgUrl + `topic/topic@large.png`} // use normal <img> attributes as props
                     alt="banner"
                 />
             </div>
@@ -336,24 +336,24 @@ export default Form.create()(withRouter((props) => {
                         width="100%"
                         height="100%"
                         effect="blur"
-                        placeholderSrc={config.staticImgUrl + `topic/part-1@small.jpg`}
-                        src={config.staticImgUrl + `topic/part-1@large.jpg`} // use normal <img> attributes as props
+                        placeholderSrc={config.staticImgUrl + `topic/part-1@small.png`}
+                        src={config.staticImgUrl + `topic/part-1@large.png`} // use normal <img> attributes as props
                         alt="banner"
                     />
                     <LazyLoadImage
                         width="100%"
                         height="100%"
                         effect="blur"
-                        placeholderSrc={config.staticImgUrl + `topic/part-2@small.jpg`}
-                        src={config.staticImgUrl + `topic/part-2@large.jpg`} // use normal <img> attributes as props
+                        placeholderSrc={config.staticImgUrl + `topic/part-2@small.png`}
+                        src={config.staticImgUrl + `topic/part-2@large.png`} // use normal <img> attributes as props
                         alt="banner"
                     />
                     <LazyLoadImage
                         width="100%"
                         height="100%"
                         effect="blur"
-                        placeholderSrc={config.staticImgUrl + `topic/part-3@small.jpg`}
-                        src={config.staticImgUrl + `topic/part-3@large.jpg`} // use normal <img> attributes as props
+                        placeholderSrc={config.staticImgUrl + `topic/part-3@small.png`}
+                        src={config.staticImgUrl + `topic/part-3@large.png`} // use normal <img> attributes as props
                         alt="banner"
                     />
                 </div>
